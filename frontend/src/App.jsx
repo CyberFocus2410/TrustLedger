@@ -879,8 +879,8 @@ function App() {
                               cx="80"
                               cy="80"
                               r="68"
-                              className="stroke-gray-800"
-                              strokeWidth={isHighContrast ? "4" : "8"}
+                              className={isLightMode ? "stroke-slate-100" : "stroke-gray-800"}
+                              strokeWidth={isLightMode ? "6" : "8"}
                               fill="transparent"
                             />
                             <circle
@@ -888,7 +888,7 @@ function App() {
                               cy="80"
                               r="68"
                               stroke={getScoreColor(scoringResult.merchant_score).fill}
-                              strokeWidth={isHighContrast ? "6" : "10"}
+                              strokeWidth={isLightMode ? "8" : "10"}
                               fill="transparent"
                               strokeDasharray={2 * Math.PI * 68}
                               strokeDashoffset={2 * Math.PI * 68 * (1 - scoringResult.merchant_score / 100)}
